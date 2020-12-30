@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="@color/backgroundCD"
+    tools:context=".UI.PokemonDescription">
+
+    <ImageView
+        android:id="@+id/imageViewPokemonDescription"
+        android:layout_width="170dp"
+        android:layout_height="162dp"
+        android:layout_marginTop="17dp"
+        android:foregroundTint="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="@+id/textViewNameDescription"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="@+id/textViewNameDescription"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNameDescription" />
+
+    <TextView
+        android:id="@+id/textViewNameDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/pokemon"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTypes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/card_bg"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewPokemonDescription"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="@+id/imageViewPokemonDescription"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPokemonDescription" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerViewHabilidades"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/card_bg"
+        app:layout_constraintEnd_toEndOf="@+id/recyclerViewTypes"
+        app:layout_constraintStart_toStartOf="@+id/recyclerViewTypes"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textViewEvoluciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Evoluciones"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewPokemonDescription"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="@+id/imageViewPokemonDescription"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewTypes" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:background="@drawable/card_bg"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewEvoluciones"
+        app:layout_constraintStart_toStartOf="@+id/textViewEvoluciones"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEvoluciones">
+
+        <ImageView
+            android:id="@+id/imageViewEvolutionMedia"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageViewEvolucionMenor"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewEvolutionMedia"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageViewEvolutionMayor"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@+id/imageViewEvolutionMedia"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/habilidades"
+        app:layout_constraintEnd_toEndOf="@+id/textViewEvoluciones"
+        app:layout_constraintStart_toStartOf="@+id/textViewEvoluciones"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <TextView
+        android:id="@+id/textViewIdPokemon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/idPokemon"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewNameDescription"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="@+id/textViewNameDescription"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNameDescription" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
